@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=3]
+[ext_resource path="res://Interface/VisionMode.tscn" type="PackedScene" id=4]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 16, 12, 16, 12, 12, 16, 8, 16, 8, 52, 12, 56, 52, 56, 56, 52, 56, 16, 52, 16, 48, 12 )
@@ -306,9 +307,12 @@ format = 1
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 194.39, 159.523 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.352941, 0.352941, 0.352941, 1 )
+[node name="VisionMode" parent="." instance=ExtResource( 4 )]
 
 [node name="Cameras" type="Node" parent="."]
 
 [node name="Guards" type="Node" parent="."]
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]

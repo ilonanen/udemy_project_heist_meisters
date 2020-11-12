@@ -6,6 +6,8 @@
 [ext_resource path="res://Characters/NPCs/Guard.gd" type="Script" id=4]
 
 [node name="Guard" instance=ExtResource( 2 )]
+collision_layer = 4
+collision_mask = 7
 script = ExtResource( 4 )
 
 [node name="Sprite" parent="." index="0"]
@@ -16,6 +18,5 @@ offset = Vector2( -2, 0 )
 position = Vector2( 10, 0 )
 
 [node name="Timer" type="Timer" parent="." index="4"]
-wait_time = 3.0
 one_shot = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
